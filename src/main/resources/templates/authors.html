@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thumeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spring Framework</title>
+</head>
+<body>
+
+<h1>Book List</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Last Name</th>
+    </tr>
+    <tr th:each="auth : ${authors}">
+        <td th:tex="${auth.id}">id</td>
+        <td th:text="${auth.firstName}">Name</td>
+        <td th:text="${auth.lastName}">Last Name</td>
+    </tr>
+</table>
+
+</body>
+</html>
